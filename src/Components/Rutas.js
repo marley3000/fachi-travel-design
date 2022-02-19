@@ -13,14 +13,12 @@ const Rutas = () => {
             <header>
                 <NavBar/>
             </header>
-            <main>
               <Routes>
                 <Route path="/" element={<Inicio/>}/>
                 <Route path="/Destinos" element={<Destinos/>}/>
                 <Route path="/Contacto" element={<Contacto/>}/>
                 <Route path="*" element={<Error404/>}/>
               </Routes>
-            </main>
             <footer>
               <Footer/>
             </footer>
