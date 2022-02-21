@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom" 
-import NavBar from "./NavBar"
+import NavBar from "./NavBar/NavBar"
 import Footer from "./Footer"
 import Inicio from "./Inicio"
 import Error404 from "./Error404"
@@ -15,14 +15,14 @@ const Rutas = () => {
       <>
         <Router>
             <header>
-                <NavBar/>
+              <NavBar/>
             </header>
               <Routes>
                 <Route path="/" element={<Inicio/>}/>
-                <Route path="./Lista Destinos/Europa.js" element={<Europa/>}/>
-                <Route path="./Lista Destinos/Caribe.js" element={<Caribe/>}/>
-                <Route path="./Lista Destinos/MedioOriente.js" element={<MedioOriente/>}/>
-                <Route path="./Lista Destinos/SudesteAsiático.js" element={<SudesteAsiático/>}/>
+                <Route path="./Lista Destinos/Europa" element={<Europa/>}/>
+                <Route path="./Lista Destinos/Caribe" element={<Caribe/>}/>
+                <Route path="./Lista Destinos/MedioOriente" element={<MedioOriente/>}/>
+                <Route path="./Lista Destinos/SudesteAsiático" element={<SudesteAsiático/>}/>
                 <Route path="/Contacto" element={<Contacto/>}/>
                 <Route path="*" element={<Error404/>}/>
               </Routes>

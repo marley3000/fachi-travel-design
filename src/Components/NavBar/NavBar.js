@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom"
-import logo from './Images/Logo Avion.png'
+import logo from '../Images/Logo Avion.png'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import HamburgerMenu from "./HamburgerMenu"
 
 
 function classNames(...classes) {
@@ -11,12 +12,15 @@ function classNames(...classes) {
 const NavBar = () => {
   return (
  
-    <nav className="fixed w-full flex justify-between items-center bg-blue-800 px-4">
+    <nav className="fixed w-full flex justify-between items-center bg-blue-700 px-4">
       <div className="flex items-center justify-between h-20">
-        <img className="h-16 mr-4" src={logo} alt="Fachi Travel Design"/>
-        <p className="text-white text-3xl font-bold">FACHI TRAVEL DESIGN</p>
+        <img className="h-10 sm:h-16 mr-4" src={logo} alt="Fachi Travel Design"/>
+        <p className="text-white text-xl sm:text-2xl font-bold text-center">FACHI <br/>TRAVEL DESIGN</p>
       </div>
-      <div className="mr-4">
+      <div className="flex flex-col items-center justify-center py-2 sm:hidden">
+        <HamburgerMenu/>
+      </div>
+      <div className="mr-4 hidden sm:inline">
         <ul className="flex justify-between list-none">
           <li className="text-white px-4 py-2 no-underline hover:rounded-md hover:bg-gray-200 hover:text-black"><NavLink to="/" activeClassName="active">Inicio</NavLink></li>
           <li>
@@ -40,7 +44,7 @@ const NavBar = () => {
                   <div className="py-1">
                     <Menu.Item>
                       {({ active }) => (
-                        <NavLink to="./Lista Destinos/Europa.js" className={classNames(
+                        <NavLink to="../Lista Destinos/Europa" className={classNames(
                             active ? 'bg-gray-200 text-black' : 'text-black',
                             'block px-4 py-2 text-sm'
                         )}>Europa</NavLink>
@@ -48,7 +52,7 @@ const NavBar = () => {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <NavLink to="./Lista Destinos/Caribe.js" className={classNames(
+                        <NavLink to="../Lista Destinos/Caribe" className={classNames(
                             active ? 'bg-gray-200 text-black' : 'text-black',
                             'block px-4 py-2 text-sm'
                         )}>Caribe</NavLink>
@@ -56,7 +60,7 @@ const NavBar = () => {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <NavLink to="./Lista Destinos/MedioOriente.js" className={classNames(
+                        <NavLink to="../Lista Destinos/MedioOriente" className={classNames(
                             active ? 'bg-gray-200 text-black' : 'text-black',
                             'block px-4 py-2 text-sm'
                         )}>Medio Oriente</NavLink>
@@ -64,7 +68,7 @@ const NavBar = () => {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <NavLink to="./Lista Destinos/SudesteAsiático.js" className={classNames(
+                        <NavLink to="../Lista Destinos/SudesteAsiático" className={classNames(
                             active ? 'bg-gray-200 text-black' : 'text-black',
                             'block px-4 py-2 text-sm'
                         )}>Sudeste Asiático</NavLink>
@@ -75,7 +79,7 @@ const NavBar = () => {
               </Transition>
             </Menu>
           </li>
-          <li className="text-white px-4 py-2 no-underline hover:rounded-md hover:bg-gray-200 hover:text-black"><NavLink to="/Contacto" activeClassName="active">Contacto</NavLink></li>
+          <li className="text-white px-4 py-2 no-underline hover:rounded-md hover:bg-gray-200 hover:text-black"><NavLink to="../Contacto" activeClassName="active">Contacto</NavLink></li>
         </ul>
       </div>
     </nav>
