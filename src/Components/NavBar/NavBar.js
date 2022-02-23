@@ -10,7 +10,7 @@ import MenuDestinos from "./MenuDestinos"
 const NavBar = () => {
   return (
  
-    <nav className="fixed w-full flex justify-between items-center bg-blue-700 px-4">
+    <nav className="fixed w-full flex justify-between items-center bg-slate-900 px-4">
       <div className="flex items-center justify-between h-20">
         <img className="h-10 sm:h-16 mr-4" src={logo} alt="Fachi Travel Design"/>
         <p className="text-white text-xl sm:text-2xl font-bold text-center">FACHI <br/>TRAVEL DESIGN</p>
