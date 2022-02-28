@@ -2,8 +2,8 @@ import React from 'react'
 
 const Inicio = () => {
   return (
-    <main className='pt-24 bg-yellow-100 h-screen'>
-      <div>Inicio</div>
+    <main className='h-screen pt-24 bg-yellow-100'>
+      
     </main>
   )
 }

@@ -4,10 +4,11 @@ import Footer from "./Footer"
 import Inicio from "./Inicio"
 import Error404 from "./Error404"
 import Contacto from "./Contacto"
-import Europa from "./Lista Destinos/Europa"
-import Caribe from "./Lista Destinos/Caribe"
-import MedioOriente from "./Lista Destinos/MedioOriente"
-import SudesteAsiático from "./Lista Destinos/SudesteAsiático"
+import Europa from "./ListaDestinos/Europa"
+import Caribe from "./ListaDestinos/Caribe"
+import MedioOriente from "./ListaDestinos/MedioOriente"
+import SudesteAsiático from "./ListaDestinos/SudesteAsiático"
+
 
 
 const Rutas = () => {
@@ -19,10 +20,10 @@ const Rutas = () => {
             </header>
               <Routes>
                 <Route path="/" element={<Inicio/>}/>
-                <Route path="./Lista Destinos/Europa" element={<Europa/>}/>
-                <Route path="./Lista Destinos/Caribe" element={<Caribe/>}/>
-                <Route path="./Lista Destinos/MedioOriente" element={<MedioOriente/>}/>
-                <Route path="./Lista Destinos/SudesteAsiático" element={<SudesteAsiático/>}/>
+                <Route path="./ListaDestinos/Europa" element={<Europa/>}/>
+                <Route path="./ListaDestinos/Caribe" element={<Caribe/>}/>
+                <Route path="./ListaDestinos/MedioOriente" element={<MedioOriente/>}/>
+                <Route path="./ListaDestinos/SudesteAsiático" element={<SudesteAsiático/>}/>
                 <Route path="/Contacto" element={<Contacto/>}/>
                 <Route path="*" element={<Error404/>}/>
               </Routes>
